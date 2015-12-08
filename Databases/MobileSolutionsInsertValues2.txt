@@ -1,0 +1,26 @@
+INSERT INTO Products VALUES (005283923, 'Nokia', 'Brick', 'Indestructible', 2500, '5-11-2005');
+INSERT INTO Products VALUES (005283924, 'Nokia', 'SmartBrick', 'Indestructible', 5000, '10-31-2014');
+INSERT INTO Products VALUES (001237889, 'Samsung', 'Note 4', 'Touch-screen', 3500, '10-17-2014');
+INSERT INTO Products VALUES (001237988, 'Samsung', 'Galaxy S5', 'Touch-screen', 5500, '4-11-2014');
+INSERT INTO Products VALUES (008923732, 'Foxconn', 'iPhone 6', 'Touch-screen', 1500, '9-19-2014');
+INSERT INTO Products VALUES (008923733, 'Foxconn', 'iPhone 6+', 'Touch-screen', 1500, '9-19-2014');
+INSERT INTO Products VALUES (003891038, 'Microsoft', 'Lumia 535', 'Windows Compatible', 500, '11-29-2014');
+INSERT INTO Products VALUES (123456789, 'ZTE', 'Zinger', 'Lollipop Android', 250, '9-21-2010');
+
+INSERT INTO Warehouse VALUES (0002, 0000459200, '4 Huntington Ave.', 'Boston', 'MA', 02115, '(617)234-1238', 'Sean Loranger',01000);
+INSERT INTO Warehouse VALUES (0054, 0000200000, '912 Washington St.', 'Worcester', 'MA', 11128, '(508)968-6392', 'Pasha Sing',00500);
+INSERT INTO Warehouse VALUES (0231, 0000099800, '3 Fifty Circle', 'Dedham', 'MA', 02026, '(781)517-7611', 'Chris Plott',00300);
+
+INSERT INTO supply_schedule VALUES (0021, 0002, 008923732, 50, 2000.83, '1-1-2015', 'Stock refill');
+INSERT INTO supply_schedule VALUES (0021, 0002, 008923733, 50, 3000.16, '1-1-2015', 'Stock refill');
+INSERT INTO supply_schedule VALUES (0021, 0002, 001237889, 50, 1589.94, '1-1-2015', 'Stock refill');
+INSERT INTO supply_schedule VALUES (7789, 0231, 005283923, 100, 322.14, '3-14-2015', 'Stock refresh');
+INSERT INTO supply_schedule VALUES (7789, 0231, 005283923, 1000, 3221.49, '3-21-2015', 'Black Market Sales');
+INSERT INTO supply_schedule VALUES (9862, 0054, 123456789, 250, 5973.52, '9-22-2010', 'Initial stocking');
+INSERT INTO supply_schedule VALUES (9862, 0054, 003891038, 2, 201.98, '2-14-2015', 'Customer Request');
+
+INSERT INTO transactions VALUES (008923733, 18783, 723844022, '3-26-2015', 50.00, 'Upgrade', 1);
+INSERT INTO transactions VALUES (001237889, 09876, 122331444, '1-11-2015', 50.00, 'Upgrade', 1);
+INSERT INTO transactions VALUES (008923732, 12202, 884755304, '8-3-2014', 25.99, 'Phone order', 3);
+INSERT INTO transactions VALUES (003891038, 18783, 122332422, '2-14-2015', 296.98, 'In-store order', 2);
+INSERT INTO transactions VALUES (123456789, 12201, 223441322, '3-14-2015', 628.64, 'In-store order', 7);

@@ -1,0 +1,29 @@
+Housing Development
+	--Name
+	-Location
+	-Year Opened
+	-Height in Stories
+
+*There is one housing development for each housing unit, but there is at least one housing unit for each housing development.
+
+Housing Unit
+	--Number
+	-Bedrooms
+	-Bathrooms
+	-Kitchen/Living room?
+	-Square footage
+
+*There is only one household in each housing unit, and there is only one housing unit for each household.
+
+Household
+	-Move in date
+	-Move out date
+	-Housing number(Development:Number)
+
+*There is at least one member of the household per household, but a member of a household can only be part of one household.
+
+Member of Household
+	--Name
+	-DoB
+	-Sex
+	-Head?

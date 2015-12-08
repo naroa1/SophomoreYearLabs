@@ -1,0 +1,44 @@
+1. WORKS
+SELECT name
+FROM L_Customers;
+
+2. WORKS
+SELECT name
+FROM L_Customers
+WHERE name like 'J%';
+
+3. WORKS
+SELECT name
+FROM L_Customers
+WHERE city like 'B%';
+
+4. WORKS
+SELECT name
+FROM L_Customers
+WHERE city = 'Salem';
+
+5. WORKS
+SELECT *
+FROM L_Orders
+WHERE qty<100;
+
+6. WORKS
+SELECT DISTINCT Customer_No
+FROM L_Orders
+WHERE qty BETWEEN 1 AND 500;
+
+7. WORKS
+SELECT Customer_No, name, ZIP
+FROM L_Customers
+WHERE NOT city= 'Boston';
+
+8. WORKS
+SELECT name as SelectName
+FROM L_Customers
+WHERE Telephone like '%2_';
+
+9. WORKS
+SELECT Customer_No, Order_No, qty
+FROM L_Orders
+WHERE Item_No like '98___' 
+ORDER BY qty DESC, Order_No ASC;

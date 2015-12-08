@@ -1,0 +1,55 @@
+INSERT INTO Company VALUES ('0999076544', 'Phone Co.', '66 Main St.', 'Boston', 'MA', '21112', '(617)000-5555', 'Trevor Phonesmith', '04-23-1996');
+INSERT INTO Company VALUES ('0999076545', 'We Make Phones, Inc.', '17 Prince St.', 'Worcester', 'MA', '11128', '(508)111-1234', 'Steven Ringer', '01-30-2002');
+INSERT INTO Company VALUES ('0999076546', 'Phone Manufacturers, Ltd.', '129 Cedar St.', 'Dedham', 'MA', '02026', '(781)323-2332', 'Oliver Bell', '08-23-1999');
+
+INSERT INTO Customer VALUES ('122331444', '422 James St.', 'Boston', 'John', 'Black', '(617)667-8767', 'MA', '21111');
+INSERT INTO Customer VALUES ('122331433', '23 Hill St.', 'Salem', 'Hank', 'Schrader', '(781)888-5525', 'MA', '02321');
+INSERT INTO Customer VALUES ('122332422', '52 Park Rd.', 'Worcester', 'Robert', 'Williams', '(508)121-3343', 'MA', '01610');
+INSERT INTO Customer VALUES ('122334411', '354 Sprague St.', 'Dedham', 'Ashley', 'Miller', '(781)326-2299', 'MA', '02026');
+INSERT INTO Customer VALUES ('884755304', '10 Tower St.', 'Boston', 'Tom', 'Henry', '(617)229-2999', 'MA', '21112');
+INSERT INTO Customer VALUES ('884723139', '76 Forest St.', 'Boston', 'Rebecca', 'Smith', '(977)737-3322', 'MA', '02110');
+INSERT INTO Customer VALUES ('723844022', '100 King St.', 'Worcester', 'Anne', 'Jameson', '(508)277-2816', 'MA', '01605');
+INSERT INTO Customer VALUES ('223441322', '50 Center St.', 'Boston', 'Martin', 'McCarthy', '(617)332-8897', 'MA', '21112');
+
+INSERT INTO Stores VALUES ('0020', 'Huntington', '623 Huntington Ave.', 'Boston', 'MA', '21112', '(617)652-9009', 'Gregory Washington', '01-23-1999', '0999076544');
+INSERT INTO Stores VALUES ('0021', 'Hanover', '27 Hanover St.', 'Boston', 'MA', '21112', '(617)772-1882', 'Lincoln Abrams', '11-11-1998', '0999076544');
+INSERT INTO Stores VALUES ('9862', 'Grove St.', '122 Grove St.', 'Worcester', 'MA', '11128', '(508)273-2774', 'Roose Franklin', '09-2-2003', '0999076545');
+INSERT INTO Stores VALUES ('7789', 'Oakdale', '11 Whiting Ave.', 'Dedham', 'MA', '02026', '(781)122-2844', 'Nick Richardson', '02-18-2000', '0999076546');
+
+INSERT INTO Employees VALUES ('09877', '0020', 'T', 'Gregory', 'Washington', '12-13-1981', '05-12-2001', '(617)127-1222', '67 James St.', 'Boston', 'MA', '21112', 'Manager');
+INSERT INTO Employees VALUES ('09876', '0020', 'F', 'Walter', 'White', '07-11-1974', '06-16-2000', '(617)922-2993', '48 Pierce St.', 'Boston', 'MA', '21112', 'Salesman');
+INSERT INTO Employees VALUES ('19921', '0021', 'T', 'Lincoln', 'Abrams', '05-15-1980', '08-24-2006', '(781)288-2122', '12 Hanover St.', 'Needham', 'MA', '02292', 'Manager');
+INSERT INTO Employees VALUES ('19922', '0021', 'F', 'Christina', 'Masterson', '01-10-1978', '07-05-2007', '(781)299-2111', '107 Woods St.', 'Salem', 'MA', '02321', 'Salesman');
+INSERT INTO Employees VALUES ('19923', '0021', 'F', 'Brian', 'Weeks', '10-29-1968', '05-22-2002', '(781)055-9922', '40 Aspen Rd.', 'Dedham', 'MA', '02026', 'Salesman');
+INSERT INTO Employees VALUES ('18782', '9862', 'T', 'Roose', 'Franklin', '07-18-1979', '10-28-2003', '(508)293-2226', '22 Forbes St.', 'Worcester', 'MA', '11128', 'Manager');
+INSERT INTO Employees VALUES ('18783', '9862', 'F', 'Carol', 'McAdams', '09-29-1980', '06-30-2008', '(508)605-1002', '87 Richards St.', 'Worcester', 'MA', '11128', 'Salesman');
+INSERT INTO Employees VALUES ('12200', '7789', 'T', 'Nick', 'Richardson', '10-18-1983', '12-12-2000', '(781)645-2004', '10 Canton St.', 'Norwood', 'MA', '01222', 'Manager');
+INSERT INTO Employees VALUES ('12201', '7789', 'F', 'Tyler', 'Powers', '12-19-1978', '02-28-2004',  '(781)428-1995', '90 Islington St.', 'Canton', 'MA', '02100', 'Salesman');
+INSERT INTO Employees VALUES ('12202', '7789', 'F', 'George', 'Dickinson', '04-19-1980', '03-31-2001', '(781)916-1992', '33 Haven Rd.', 'Needham', 'MA', '00222', 'Salesman');
+
+INSERT INTO Products VALUES (005283923, 'Nokia', 'Brick', 'Indestructible', 2500, '5-11-2005');
+INSERT INTO Products VALUES (005283924, 'Nokia', 'SmartBrick', 'Indestructible', 5000, '10-31-2014');
+INSERT INTO Products VALUES (001237889, 'Samsung', 'Note 4', 'Touch-screen', 3500, '10-17-2014');
+INSERT INTO Products VALUES (001237988, 'Samsung', 'Galaxy S5', 'Touch-screen', 5500, '4-11-2014');
+INSERT INTO Products VALUES (008923732, 'Foxconn', 'iPhone 6', 'Touch-screen', 1500, '9-19-2014');
+INSERT INTO Products VALUES (008923733, 'Foxconn', 'iPhone 6+', 'Touch-screen', 1500, '9-19-2014');
+INSERT INTO Products VALUES (003891038, 'Microsoft', 'Lumia 535', 'Windows Compatible', 500, '11-29-2014');
+INSERT INTO Products VALUES (123456789, 'ZTE', 'Zinger', 'Lollipop Android', 250, '9-21-2010');
+
+INSERT INTO Warehouse VALUES (0002, 0000459200, '4 Huntington Ave.', 'Boston', 'MA', 02115, '(617)234-1238', 'Sean Loranger',01000);
+INSERT INTO Warehouse VALUES (0054, 0000200000, '912 Washington St.', 'Worcester', 'MA', 11128, '(508)968-6392', 'Pasha Sing',00500);
+INSERT INTO Warehouse VALUES (0231, 0000099800, '3 Fifty Circle', 'Dedham', 'MA', 02026, '(781)517-7611', 'Chris Plott',00300);
+
+INSERT INTO supply_schedule VALUES (0021, 0002, 008923732, 50, 2000.83, '1-1-2015', 'Stock refill');
+INSERT INTO supply_schedule VALUES (0021, 0002, 008923733, 50, 3000.16, '1-1-2015', 'Stock refill');
+INSERT INTO supply_schedule VALUES (0021, 0002, 001237889, 50, 1589.94, '1-1-2015', 'Stock refill');
+INSERT INTO supply_schedule VALUES (7789, 0231, 005283923, 100, 322.14, '3-14-2015', 'Stock refresh');
+INSERT INTO supply_schedule VALUES (7789, 0231, 005283923, 1000, 3221.49, '3-21-2015', 'Black Market Sales');
+INSERT INTO supply_schedule VALUES (9862, 0054, 123456789, 250, 5973.52, '9-22-2010', 'Initial stocking');
+INSERT INTO supply_schedule VALUES (9862, 0054, 003891038, 2, 201.98, '2-14-2015', 'Customer Request');
+
+INSERT INTO transactions VALUES (008923733, 18783, 723844022, '3-26-2015', 50.00, 'Upgrade', 1);
+INSERT INTO transactions VALUES (001237889, 09876, 122331444, '1-11-2015', 50.00, 'Upgrade', 1);
+INSERT INTO transactions VALUES (008923732, 12202, 884755304, '8-3-2014', 25.99, 'Phone order', 3);
+INSERT INTO transactions VALUES (003891038, 18783, 122332422, '2-14-2015', 296.98, 'In-store order', 2);
+INSERT INTO transactions VALUES (123456789, 12201, 223441322, '3-14-2015', 628.64, 'In-store order', 7);

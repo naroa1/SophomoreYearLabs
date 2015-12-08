@@ -1,0 +1,142 @@
+-- Create Tables Project 1
+--
+--
+CREATE TABLE Company(
+Tax_ID int(10) NOT NULL,
+Company_Name varchar(20) NOT NULL,
+Address varchar(20) NOT NULL, 
+City varchar(20) NOT NULL,
+State varchar(2) NOT NULL,
+Zip varchar(5) NOT NULL,
+Phone_No varchar(14) NOT NULL,
+CEO varchar(20) NOT NULL,
+Founded_Date varchar(10) NOT NULL,
+CONSTRAINT Company_PK
+		PRIMARY KEY (Tax_ID)
+);
+
+CREATE TABLE Stores(
+Store_No int(4) NOT NULL,
+Store_Location varchar(20) NOT NULL,
+Address varchar(20) NOT NULL, 
+City varchar(20) NOT NULL,
+State varchar(2) NOT NULL,
+Zip varchar(5) NOT NULL,
+Phone_No varchar(14) NOT NULL,
+Location_Manager varchar(20),
+Est_Date varchar(10) NOT NULL,
+Tax_ID int(10) NOT NULL,
+CONSTRAINT Stores_PK
+		PRIMARY KEY (Store_No),
+CONSTRAINT Store_Cmpny_FK
+		FOREIGN KEY (Tax_ID)
+		REFERENCES Company(Tax_ID)
+);
+
+CREATE TABLE Warehouse(
+Warehouse_No int(4) NOT NULL,
+Capacity int(10),
+Address varchar(20),
+City varchar(20),
+State varchar(2),
+Zip varchar(5),
+Phone_No varchar(14) NOT NULL,
+Warehouse_Mgr varchar(20) NOT NULL,
+Shipping_Rng int(5),
+CONSTRAINT Warehouse_PK
+		PRIMARY KEY (Warehouse_No)
+);
+
+CREATE TABLE Products (
+Product_No int(9) NOT NULL,
+Manufacture varchar(20),
+Name varchar(20),
+Description varchar(20),
+Quantity int(5) NOT NULL,
+Arrival_Date varchar(10) NOT NULL,
+CONSTRAINT Products_PK
+		PRIMARY KEY (Product_No)
+);
+
+CREATE TABLE Supply_Schedule(
+Store_No int(4) NOT NULL,
+Warehouse_No int(4) NOT NULL,
+Product_No int(9) NOT NULL,
+Quantity int(5),
+Cost DECIMAL(5,1),
+Date varchar(10) NOT NULL,
+Type varchar(20),
+CONSTRAINT Supply_Store_FK
+		FOREIGN KEY (Store_No)
+		REFERENCES Stores(Store_No),
+CONSTRAINT Supply_Ware_FK
+		FOREIGN KEY (Warehouse_No)
+		REFERENCES Warehouse(Warehouse_No),
+CONSTRAINT Supply_Product_FK
+		FOREIGN KEY (Product_No)
+		REFERENCES Products(Product_No)
+);
+
+CREATE TABLE Customer (
+Account_No int(9) NOT NULL,
+Last_Name varchar(20) NOT NULL,
+First_Name varchar(20) NOT NULL,
+Address varchar(20),
+City varchar(20),
+State varchar(2),
+Zip varchar(5),
+Phone_No varchar(14) NOT NULL,
+CONSTRAINT Customer_PK
+		PRIMARY KEY (Account_No)
+);
+
+CREATE TABLE Employees (
+Employee_No int(5) NOT NULL,
+Store_No int(4) NOT NULL,
+Manages varchar(20) NOT NULL,
+Last_Name varchar(20) NOT NULL,
+First_Name varchar(20) NOT NULL,
+DOB varchar(10),
+Date_Hired varchar(10),
+Phone_No varchar(14),
+Address varchar(20),
+City varchar(20),
+State varchar(2),
+Zip varchar(5),
+Job_Title varchar(20),
+CONSTRAINT Employees_PK
+		PRIMARY KEY (Employee_No),
+CONSTRAINT Emp_Store_FK
+		FOREIGN KEY (Store_No)
+		REFERENCES Stores(Store_No)
+);
+
+CREATE TABLE Transactions (
+Product_No int(9) NOT NULL,
+Employee_No int(5) NOT NULL,
+Account_No int(9) NOT NULL,
+Trans_Date varchar(10),
+Cost DECIMAL(5, 1),
+Type varchar(20),
+Quantity int(5),
+CONSTRAINT Trans_Product_FK
+		FOREIGN KEY (Product_No)
+		REFERENCES Products(Product_No),
+CONSTRAINT Trans_Emp_FK
+		FOREIGN KEY (Employee_No)
+		REFERENCES Employees(Employee_No),
+CONSTRAINT Trans_Acct_FK
+		FOREIGN KEY (Account_No)
+		REFERENCES Customer(Account_No)
+);
+
+/*
+Drop table Transactions;
+Drop table Employees;
+Drop table Customer;
+Drop Table Supply_Schedule;
+Drop table Products;
+Drop Table Warehouse;
+Drop Table Stores;
+Drop Table Company;
+*/

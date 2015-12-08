@@ -1,0 +1,35 @@
+List products, sorting by quantity:
+
+SELECT Product_No, Name, Quantity
+FROM Products
+WHERE Quantity<2000
+ORDER BY Quantity;
+
+
+
+List Warehouse Number and the Date of all Stock refills:
+
+SELECT Warehouse_No, Date
+FROM supply_schedule
+WHERE Type = 'Stock refill';
+
+
+
+List account number, date, cost, and type of transaction of all transactions greater than $30 and less than $500:
+
+SELECT Account_No, Trans_Date, Cost, Type
+FROM Transactions
+WHERE Cost>30 AND Cost<500;
+
+
+
+List all products and quantity with touch-screen descriptions:
+
+SELECT Name, Product_No, Quantity, Description
+FROM Products
+WHERE Description = 'Touch-screen';
+
+
+
+
+

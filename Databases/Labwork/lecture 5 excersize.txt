@@ -1,0 +1,11 @@
+1. SELECT Cid | FROM Client | WHERE Cid<100;
+
+2. SELECT ANum, BuildingNum, FloorNum, Available | FROM Apartment | WHERE Available LIKE '%yes%';
+
+3. SELECT Cid | FROM Client | WHERE Cid<1500 AND Cid>600;
+
+4. SELECT Anum | FROM Apartment | WHERE Anum NOT LIKE 'D';
+
+5. SELECT CName | FROM Client | WHERE CName='*6* | more junk
+
+6. SELECT PeriodRent | FROM CLIENT | WHERE PeriodRent>6 OR PeriodRent=6 | more junk
